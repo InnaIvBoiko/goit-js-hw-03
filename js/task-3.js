@@ -1,24 +1,14 @@
-// function filterArray(numbers, value) {
-//     let resultFilterAvvay = [];
-//     for (let i = 0; i < numbers.length; i++) {
-//         if (numbers[i] > value) {
-//             resultFilterAvvay.push(numbers[i])
-//         }
-//     }
-//     return resultFilterAvvay;
-// }
+const filterArray = function (numbers, value) {
+  const newArr = [];
 
+  for (const num of numbers) {
+    if (num > value) {
+      newArr.push(num);
+    }
+  }
 
-function filterArray(numbers, value) {
-   let resultFilterAvvay = [];
-   for (let number of numbers) {
-       if (number > value) {
-           resultFilterAvvay.push(number)
-       }
-   }
-   return resultFilterAvvay;
-}
-
+  return newArr;
+};
 
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
 console.log(filterArray([1, 2, 3, 4, 5], 4)); // [5]
